@@ -1,6 +1,7 @@
 package br.com.steps;
 
 import static br.com.core.DriverFactory.getDriver;
+import static org.junit.Assert.assertNotNull;
 import br.com.core.Diretor;
 import br.com.core.Filme;
 import br.com.pages.GoogleHomePage;
@@ -37,6 +38,8 @@ public class PesquisaFilmesGoogleSteps {
 	@Então("^recebo o total de resultados para a pesquisa$")
 	public void recebo_o_total_de_resultados_para_a_pesquisa() throws Throwable {
 		System.out.println(googlePesquisa.getResultadoAproximadamente().toString());
+		assertNotNull(googlePesquisa.getResultadoAproximadamente().toString());
+		
 	}
 	
 
